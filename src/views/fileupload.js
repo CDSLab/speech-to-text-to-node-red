@@ -160,8 +160,20 @@ exports.initFileUpload = function(ctx) {
     }
     fileUploadDialog.val(null);
 
-    fileUploadDialog
-    .trigger('click');
+    var question = encodeURIComponent($('#resultsText').val())
+    var url = "https://watsondemos.mybluemix.net/HelloWorld?q="+question;
+
+    var audio2 = window.document.createElement('audio');
+    audio2.style.display = "none";
+    audio2.src = url;
+    audio2.autoplay = true;
+    audio2.onended = function(){
+        audio2.remove(); //Remove when played.
+    };
+    window.document.body.appendChild(audio);
+
+    //fileUploadDialog
+    //.trigger('click');
 
   });
 
