@@ -415,6 +415,14 @@ table.kws_occurrences {
   height:58px;
 }
 
+#noderedurl {
+  padding-left:1em;
+  height:58px;
+  font-style: italic;
+  color:#A0A0A0;
+  width: 600px;
+}
+
 .dropdown-menu > li > a {
   text-decoration:none;
 }
