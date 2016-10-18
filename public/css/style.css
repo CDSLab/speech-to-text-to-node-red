@@ -1,3 +1,7 @@
+.header {
+  background-position: center;
+  background-image: url('/images/bg.jpg');
+}
 .col-lg-12 {
   padding: 0px!important;
 }
@@ -41,12 +45,6 @@
 @media (min-width: 730px) {
   .nav-inverse-color {
     width: 25%;
-  }
-}
-
-@media screen and (max-width : 500px) {
-  .service-icon {
-    display: none;
   }
 }
 
@@ -169,10 +167,6 @@ ol > li:before {
 li ol,
 li ul {margin-top:6px;}
 ol ol li:last-child {margin-bottom:0;}
-
-.service-icon {
-  width: 100%;
-}
 
 #canvas {
   width:100%;

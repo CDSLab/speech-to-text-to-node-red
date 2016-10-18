@@ -11,40 +11,14 @@
     <link rel="shortcut icon" href="images/favicon.ico" />
   </head>
   <body>
-    <!-- top nav section -->
-    <div class="navbar-wrapper">
-
-      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-          <!-- IBM Watson Logo -->
-          <div class="navbar-header">
-            <a class="navbar-brand no-underline" href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/"><span class="thin-branding">IBM</span> Watson Developer Cloud</a>
-          </div>
-          <div class="float-right">
-            <ul class="nav navbar-nav">
-              <li><a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/services-catalog.html" class="no-underline">Services</a></li>
-              <li><a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/" class="no-underline">Docs</a></li>
-              <li><a href="https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/starter-kits.html" class="no-underline">Starter Kits</a></li>
-              <li><a href="https://developer.ibm.com/watson/" class="no-underline">Community</a></li>
-            </ul>
-          </div><!-- .navbar right-->
-        </div><!-- .container -->
-      </div><!-- .navbar -->
-
-    </div><!-- .navbar-wrapper -->
 
     <!-- Service Description Bar -->
 
     <div class="header">
       <div class="container">
-        <div class="col-lg-2 col-md-2 hidden-xs hidden-sm">
-          <img src="images/stt.svg" class="service-icon">
+        <div class="col-lg-2 col-md-2">
+          <img src="images/foris.png" class="service-icon">
         </div><!-- .col-lg-2 -->
-
-        <div class="col-lg-10 col-md-10 col-xs-12">
-          <h1>Speech to Text</h1>
-          </p>
-        </div><!-- .col-lg-10 -->
       </div><!-- .container -->
     </div><!-- .header -->
     <!-- Step 1 Section-->
@@ -52,24 +26,10 @@
       <!-- Step 3 Section-->
       <!-- First column of inputs -->
       <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12" style="margin-bottom: 20px;">
+        <div class="col-lg-12 col-md-12 col-sm-12" style="margin-bottom: 20px;" hidden="true">
             <span style="margin-right: 30px;">Enter server URL</span>
-            <input type="text" id="noderedurl" value="Node-Red URL" autocomplete="off">
+            <input type="text" id="noderedurl" value="http://foris.mybluemix.net" autocomplete="off">
         </div><!-- .col-lg-12 -->
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                <span id="dropdownMenuDefault" class="dropdown-text">US English broadband model (16KHz) </span>
-                <span class="caret"></span>
-              </button>
-              <ul id="dropdownMenuList" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-              </ul>
-            </div>
-          </div><!-- .col-lg-6 -->
-
-        </div><!-- row -->
 
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12">
@@ -92,7 +52,7 @@
             <li class="file-upload button-row nav-inverse-color">
             <div id="fileUploadTarget">
               <img src="images/upload.svg" class="icon"></img>
-              <span class="nav-label">Upload to Node-RED</span>
+              <span class="nav-label">Send</span>
             </div>
             </li>
           </ul>
@@ -108,7 +68,6 @@
                   <!-- Nav tabs -->
                   <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active"><a href="#home2" aria-controls="home" role="tab" data-toggle="tab">Text</a></li>
-                    <li role="presentation"><a href="#profile2" aria-controls="profile" role="tab" data-toggle="tab">JSON</a></li>
                   </ul>
                   <div class="hr-tab"></div>
                   <fieldset>
