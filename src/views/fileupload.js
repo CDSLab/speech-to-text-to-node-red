@@ -162,7 +162,7 @@ exports.initFileUpload = function(ctx) {
 
     var question = encodeURIComponent($('#resultsText').val())
     var host = $('#noderedurl').val();
-    var url = "https://" + host + "/text?q="+question;
+    var url = host + "/HelloWorld?q="+question;
 
     var audio2 = window.document.createElement('audio');
     audio2.style.display = "none";
