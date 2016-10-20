@@ -162,16 +162,43 @@ exports.initFileUpload = function(ctx) {
 
     var question = encodeURIComponent($('#resultsText').val())
     var host = $('#noderedurl').val();
-    var url = host + "/HelloWorld?q="+question;
+    var url = host + "/sendtext?q="+question;
+
+    if (!url.match(/^[a-zA-Z]+:\/\//))
+       {
+       url = 'https://' + url;
+       }
 
     var audio2 = window.document.createElement('audio');
+
+    audio2.addEventListener('error', function failed(e) {
+       // audio playback failed - show a message saying why
+       switch (e.target.error.code) {
+         case e.target.error.MEDIA_ERR_ABORTED:
+           alert('You aborted the audio playback.');
+           break;
+         case e.target.error.MEDIA_ERR_NETWORK:
+           alert('A network error caused the audio download to fail.');
+           break;
+         case e.target.error.MEDIA_ERR_DECODE:
+           alert('The audio playback was aborted due to a corruption problem or because the audio used features your browser did not support.');
+           break;
+         case e.target.error.MEDIA_ERR_SRC_NOT_SUPPORTED:
+           alert('The audio not be loaded - Please check your URL');
+           break;
+         default:
+           alert('An unknown error occurred.');
+           break;
+       }
+     }, true);
+
     audio2.style.display = "none";
     audio2.src = url;
     audio2.autoplay = true;
     audio2.onended = function(){
         audio2.remove(); //Remove when played.
     };
-    window.document.body.appendChild(audio);
+    window.document.body.appendChild(audio2);
 
     //fileUploadDialog
     //.trigger('click');
